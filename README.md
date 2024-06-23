@@ -1,4 +1,4 @@
-# VALORANT_LEGENDS
+# VALORANT-LEGENDS
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@
 
 ## Introduction
 
-Welcome to **VALORANT_LEGENDS**, a web application dedicated to providing detailed information about the agents in the popular tactical shooter game, VALORANT. This application aims to be a comprehensive resource for players looking to learn more about the abilities, lore, and stats of each agent.
+Welcome to **VALORANT-LEGENDS**, a web application dedicated to providing detailed information about the agents in the popular tactical shooter game, VALORANT. This application aims to be a comprehensive resource for players looking to learn more about the abilities, lore, and stats of each agent.
 
 ## Features
 
@@ -78,4 +78,4 @@ Contributions are what make the open-source community such an amazing place to l
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
-Project Link: [https://github.com/yourusername/VALORANT_LEGENDS](https://github.com/TANISHAK06)/VALORANT_LEGENDS)
+Project Link: [https://github.com/yourusername/VALORANT_LEGENDS](https://github.com/TANISHAK06)/VALORANT-LEGENDS)
