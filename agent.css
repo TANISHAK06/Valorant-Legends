@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Valorant', sans-serif;
+    background-color: #0E1A23;
+    margin: 0;
+    color: #fff;
+}
+
+header {
+    background-image: url("header.webp");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgb(228, 61, 61);
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin-top: 20px;
+    font-family: 'Insomnia', sans-serif;
+    font-size: 86px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 104px;
+    letter-spacing: 5.16px;
+    background: linear-gradient(180deg, #6D4BE7 0%, #998BE5 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 10px;
+    color: var(--text-color-5);
+    text-transform: uppercase;
+}
+
+main {
+    padding: 20px;
+    position: relative; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Valorant', sans-serif;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+.agent-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.agent-image {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.abilities-container {
+    color: white;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 12px;
+    flex: 1;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.ability-card {
+    margin-top: 25px;
+    background-color: #232C33;
+    padding: 15px;
+    height: auto; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden; 
+    position: relative;
+}
+
+.ability-card:hover {
+    transform: translateY(-20px); 
+}
+
+.ability-icon {
+    max-width: 80px;
+    max-height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.agent-details {
+    padding-top: 10px; 
+    overflow: hidden; 
+}
+
+.agent-details p {
+    margin-top: 10px;
+    font-family: 'VALORANT';
+    font-size: 12px;
+    line-height: 18px; 
+    font-weight: 400;
+    font-style: normal;
+    color: #fd5c63;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .abilities-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .ability-card {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        align-items: center;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        position: relative; 
+        right: auto;
+        top: auto;
+    }
+
+    .abilities-container {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+}
