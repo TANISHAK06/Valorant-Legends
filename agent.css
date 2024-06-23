@@ -7,34 +7,35 @@
 body {
     font-family: 'Valorant', sans-serif;
     background-color: #0E1A23;
-    margin: 0;
     color: #fff;
 }
 
 header {
     background-image: url("header.webp");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     color: rgb(228, 61, 61);
+    text-align: center;
 }
 
 h1 {
     margin: 0;
+    font-size: 6vw; 
 }
 
 h2 {
     margin-top: 20px;
     font-family: 'Insomnia', sans-serif;
-    font-size: 86px;
+    font-size: 8vw; 
     font-style: normal;
     font-weight: 400;
-    line-height: 104px;
-    letter-spacing: 5.16px;
+    line-height: 1.2;
+    letter-spacing: 0.3em;
     background: linear-gradient(180deg, #6D4BE7 0%, #998BE5 90%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -44,18 +45,17 @@ h2 {
 h4 {
     margin-top: 10px;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 1.5em;
     font-style: normal;
     font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.5em;
     color: var(--text-color-5);
     text-transform: uppercase;
 }
 
 main {
     padding: 20px;
-    position: relative; 
 }
 
 button {
@@ -66,9 +66,6 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-family: 'Valorant', sans-serif;
-    position: absolute;
-    right: 10px;
-    top: 5px;
 }
 
 button:hover {
@@ -88,15 +85,15 @@ button a {
 }
 
 .agent-image {
-    width: 50%;
-    max-width: 100%;
+    width: 100%;
+    max-width: 50%;
     height: auto;
 }
 
 .abilities-container {
     color: white;
     font-family: 'Aclonica', sans-serif;
-    font-size: 12px;
+    font-size: 1em; 
     flex: 1;
     margin-left: 20px;
     display: grid;
@@ -108,39 +105,38 @@ button a {
     margin-top: 25px;
     background-color: #232C33;
     padding: 15px;
-    height: auto; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    overflow: hidden; 
-    position: relative;
+    overflow: hidden;
 }
 
 .ability-card:hover {
-    transform: translateY(-20px); 
+    transform: translateY(-10px);
 }
 
 .ability-icon {
-    max-width: 80px;
+    max-width: 100%;
     max-height: 80px;
     display: block;
     margin: 0 auto;
 }
 
 .agent-details {
-    padding-top: 10px; 
-    overflow: hidden; 
+    padding-top: 10px;
+    overflow: hidden;
 }
 
 .agent-details p {
     margin-top: 10px;
-    font-family: 'VALORANT';
-    font-size: 12px;
-    line-height: 18px; 
+    font-family: 'Valorant', sans-serif;
+    font-size: 1em; 
+    line-height: 1.5;
     font-weight: 400;
     font-style: normal;
     color: #fd5c63;
 }
+
 
 @media (max-width: 768px) {
     header {
@@ -152,24 +148,20 @@ button a {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    .ability-card {
-        height: auto;
+    .agent-image {
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     header {
         align-items: center;
-        text-align: center;
     }
 
     button {
         width: 100%;
         text-align: center;
         margin-top: 10px;
-        position: relative; 
-        right: auto;
-        top: auto;
     }
 
     .abilities-container {
