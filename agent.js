@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const agentDetails = document.getElementById('agentDetails');
 
@@ -54,3 +57,5 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error fetching agent details:', error);
         });
 });
+
+
