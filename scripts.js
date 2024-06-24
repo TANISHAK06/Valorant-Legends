@@ -4,9 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchInput");
   const agentsToExclude = ["ded3520f-4264-bfed-162d-b080e2abccf9"];
 
+  searchForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    const foundAgent = filteredAgents.find((agent) => {
+      return (
+        agent.displayName.toLowerCase() === searchTerm ||
+        agent.uuid === searchTerm
+      );
+    });
+
+    if (foundAgent) {
+      window.location.href = `agent.html?id=${foundAgent.uuid}`;
+    } else {
+      alert(`Agent "${searchTerm}" does not exist.`);
+    }
+  });
+
   fetch("https://valorant-api.com/v1/agents")
     .then((response) => response.json())
     .then((data) => {
+      console.log("Data fetched successfully!");
       const filteredAgents = data.data.filter(
         (agent) => !agentsToExclude.includes(agent.uuid)
       );
@@ -14,24 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
       filteredAgents.forEach((agent) => {
         const agentCard = createAgentCard(agent);
         agentsContainer.appendChild(agentCard);
-      });
-
-      searchForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const searchTerm = searchInput.value.trim().toLowerCase();
-
-        const foundAgent = filteredAgents.find((agent) => {
-          return (
-            agent.displayName.toLowerCase() === searchTerm ||
-            agent.uuid === searchTerm
-          );
-        });
-
-        if (foundAgent) {
-          window.location.href = `agent.html?id=${foundAgent.uuid}`;
-        } else {
-          alert(`Agent "${searchTerm}" does not exist.`);
-        }
       });
     })
     .catch((error) => {
@@ -50,8 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const agentName = document.createElement("h3");
     agentName.textContent = agent.displayName;
 
+    const roleIcon = document.createElement("img");
+    roleIcon.src = agent.role.displayIcon;
+    roleIcon.classList.add("role-icon");
+    roleIcon.style.position = "absolute";
+    roleIcon.style.bottom = "10px";
+    roleIcon.style.right = "10px";
+
     agentCard.appendChild(agentImage);
     agentCard.appendChild(agentName);
+    agentCard.appendChild(roleIcon);
 
     agentCard.addEventListener("click", function () {
       window.location.href = `agent.html?id=${agent.uuid}`;
