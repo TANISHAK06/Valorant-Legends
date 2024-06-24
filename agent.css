@@ -97,7 +97,7 @@ button a {
 }
 .agent-image:hover{
     transform: rotateY(360deg);
-    animation: rotate 2s linear infinite;
+    animation: rotate 1s linear infinite;
 }
 .abilities-container {
     color: white;
