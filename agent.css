@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +7,16 @@
 
 body {
     font-family: 'Valorant', sans-serif;
-    background-color: #0E1A23;
+   /* background-color: #0E1A23;*/
+   background-image: url("generic_background.JPG");
     color: #fff;
     margin: 0;
 }
 
 header {
-    background-image: url("header.webp");
+   /* background-image: url("header.webp");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -50,7 +52,7 @@ h4 {
     font-style: normal;
     font-weight: 400;
     line-height: 1.4;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.1em;
     color: var(--text-color-5);
     text-transform: uppercase;
 }
@@ -98,14 +100,16 @@ button a {
     flex: 1;
     margin-left: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .ability-card {
-    margin-top: 25px;
     background-color: #232C33;
+    background-position: center;
     padding: 15px;
+    width: 300px;
+    min-height: 300px; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -115,6 +119,7 @@ button a {
 
 .ability-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 2px 4px rgb(251, 250, 250);
 }
 
 .ability-icon {
@@ -140,6 +145,50 @@ button a {
     word-wrap: break-word;
 }
 
+footer {
+    color: rgb(182, 182, 182);
+    background-color: rgb(19, 19, 19);
+    text-align: center;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+footer button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(44, 44, 44);
+    font-family: 'valorant_font', arial;
+    color: #fc3041;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+footer #LOGO {
+    height: 50px;
+    padding-left: 30px;
+}
+
+footer p {
+    padding-top: 20px;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer #footer_icons {
+    padding-top: 20px;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -147,7 +196,7 @@ button a {
     }
 
     .abilities-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     .agent-image {
